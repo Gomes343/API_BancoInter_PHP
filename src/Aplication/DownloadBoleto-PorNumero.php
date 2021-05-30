@@ -6,6 +6,7 @@ use ctodobom\APInterPHP\BancoInter;
 use ctodobom\APInterPHP\BancoInterException;
 use ctodobom\APInterPHP\Cobranca\Boleto;
 use ctodobom\APInterPHP\Cobranca\Pagador;
+use ctodobom\APInterPHP\Aplication;
 
 
 $correntista = new Correntista();
