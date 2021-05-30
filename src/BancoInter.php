@@ -24,8 +24,7 @@ define("INTER_ORDEM_VALOR_DESC", "VALOR_DSC");
 define("INTER_ORDEM_STATUS", "STATUS_ASC");
 define("INTER_ORDEM_STATUS_DESC", "STATUS_DSC");
 
-class BancoInter
-{
+class BancoInter{
 
     private $apiBaseURL = "https://apis.bancointer.com.br";
     private $accountNumber = null;

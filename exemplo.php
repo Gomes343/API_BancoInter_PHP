@@ -8,10 +8,10 @@ use ctodobom\APInterPHP\Cobranca\Boleto;
 use ctodobom\APInterPHP\Cobranca\Pagador;
 
 // dados do correntista
-$conta = "0000001";
-$cnpj = "12123123000112";
-$certificado = "/caminho/do/certificado.pem";
-$chavePrivada = "/caminho/da/chaveprivada.key";
+$conta = "12000272";
+$cnpj = "23629677000199";
+$certificado = "C:\Users\Muril\IdeaProjects\APInter-PHP\key\Inter API_Certificado.crt";
+$chavePrivada = "C:\Users\Muril\IdeaProjects\APInter-PHP\key\Inter API_Chave.key";
 
 
 
@@ -30,8 +30,8 @@ $chavePrivada = "/caminho/da/chaveprivada.key";
 
 
 // dados de teste
-$cpfPagador = "12312312312";
-$estadoPagador = "XX";
+$cpfPagador = "35240321841";
+$estadoPagador = "SP";
 
 $banco = new BancoInter($conta, $certificado, $chavePrivada);
 
@@ -40,8 +40,8 @@ $banco = new BancoInter($conta, $certificado, $chavePrivada);
 
 $pagador = new Pagador();
 $pagador->setTipoPessoa(Pagador::PESSOA_FISICA);
-$pagador->setNome("Nome de Teste");
-$pagador->setEndereco("Nome da rua");
+$pagador->setNome("Murilo Gomes Teixeira");
+$pagador->setEndereco("Teste programação");
 $pagador->setNumero(42);
 $pagador->setBairro("Centro");
 $pagador->setCidade("Cidade");
@@ -54,8 +54,11 @@ $boleto = new Boleto();
 $boleto->setCnpjCPFBeneficiario($cnpj);
 $boleto->setPagador($pagador);
 $boleto->setSeuNumero("123456");
-$boleto->setDataEmissao(date('Y-m-d'));
+$boleto->setDataEmissao(date('2021-05-30'));
 $boleto->setValorNominal(100.10);
+$boleto->setMensagem(new \ctodobom\APInterPHP\Cobranca\Mensagem(),set);
+
+
 $boleto->setDataVencimento(date_add(new DateTime() , new DateInterval("P10D"))->format('Y-m-d'));
 
 try {

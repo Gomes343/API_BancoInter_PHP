@@ -240,8 +240,7 @@ class Boleto implements \JsonSerializable
      *
      * @param Mensagem $mensagem
      */
-    public function setMensagem(Mensagem $mensagem)
-    {
+    public function setMensagem(Mensagem $mensagem){
         $this->mensagem = $mensagem;
     }
 
