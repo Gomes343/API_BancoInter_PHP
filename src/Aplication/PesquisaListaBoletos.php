@@ -11,11 +11,11 @@ $correntista = new Correntista();
 $banco = new BancoInter($correntista->getNumero_da_Conta(),$correntista->getCertificado(), $correntista->getChavePrivada());
 
 try {
-    header('Content-type: text/plain');
-    echo "Download do PDF\n";
-    $pdf = $banco->getPdfBoleto("00684058185");
+    echo "\nConsultando boleto\n";
+    $boleto2 = $banco->listaBoletos("2021-05-01","2021-05-31");
+    //var_dump($boleto2);
 
-    echo "\n\nSalvo PDF em ".$pdf."\n";
+
 } catch ( BancoInterException $e ) {
     echo "\n\n".$e->getMessage();
     echo "\n\nCabeçalhos: \n";

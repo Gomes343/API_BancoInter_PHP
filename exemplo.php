@@ -56,7 +56,7 @@ $boleto->setPagador($pagador);
 $boleto->setSeuNumero("123456");
 $boleto->setDataEmissao(date('2021-05-30'));
 $boleto->setValorNominal(100.10);
-$boleto->setMensagem(new \ctodobom\APInterPHP\Cobranca\Mensagem(),set);
+
 
 
 $boleto->setDataVencimento(date_add(new DateTime() , new DateInterval("P10D"))->format('Y-m-d'));

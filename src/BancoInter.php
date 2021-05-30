@@ -277,8 +277,7 @@ class BancoInter{
      *
      * @param  string $dataInicial Data de vencimento inicial
      * @param  string $dataFinal   Data de vencimento final
-     * @param  number $pagina      Página de resultado (default =
-     *                             0)
+     * @param  number $pagina      Página de resultado (default = 0)
      * @param  number $linhas      Linhas de resultado (default = 20)
      * @param  string $filtro      Filtro de resultado (default = "TODOS")
      * @param  string $ordem       Ordem do resultado (default = "NOSSONUMERO")
